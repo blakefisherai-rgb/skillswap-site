@@ -1,0 +1,73 @@
+import {
+  BadgeCheck,
+  BarChart3,
+  BookOpen,
+  Briefcase,
+  Building2,
+  Calendar,
+  Camera,
+  ClipboardCheck,
+  Clock,
+  GraduationCap,
+  HeartHandshake,
+  LayoutGrid,
+  LifeBuoy,
+  LockKeyhole,
+  Mail,
+  MapPin,
+  Megaphone,
+  MessageSquare,
+  Palette,
+  PartyPopper,
+  PiggyBank,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  Store,
+  UserCheck,
+  Users,
+  Wallet,
+  type LucideIcon,
+  type LucideProps,
+} from "lucide-react";
+
+const icons = {
+  BadgeCheck,
+  BarChart3,
+  BookOpen,
+  Briefcase,
+  Building2,
+  Calendar,
+  Camera,
+  ClipboardCheck,
+  Clock,
+  GraduationCap,
+  HeartHandshake,
+  LayoutGrid,
+  LifeBuoy,
+  LockKeyhole,
+  Mail,
+  MapPin,
+  Megaphone,
+  MessageSquare,
+  Palette,
+  PartyPopper,
+  PiggyBank,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  Store,
+  UserCheck,
+  Users,
+  Wallet,
+} satisfies Record<string, LucideIcon>;
+
+export type IconName = keyof typeof icons;
+
+/** Lets data files refer to icons by name. Add new icons to the map above. */
+export function Icon({ name, ...props }: { name: IconName } & LucideProps) {
+  const Cmp = icons[name];
+  return <Cmp aria-hidden="true" {...props} />;
+}
