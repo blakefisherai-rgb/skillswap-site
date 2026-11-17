@@ -9,7 +9,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Card, NumberBadge, Section, SectionHeading } from "@/components/ui/Section";
 import { StepList } from "@/components/ui/StepList";
 import { feeTiers, splitPrice, usd } from "@/data/pricing";
-import { categories, howItWorks } from "@/data/services";
+import { categories, howItWorks, otherSkills } from "@/data/services";
 import { cn } from "@/lib/cn";
 
 export const metadata: Metadata = {
@@ -61,8 +61,8 @@ export default function HowItWorksPage() {
       <Section id="categories" labelledBy="cat-title">
         <SectionHeading
           eyebrow="Services"
-          title="Six categories at launch"
-          intro="These are the skills students already sell on campus through Instagram and word of mouth. Prices are example ranges; students set their own rates."
+          title="List any skill. Here's where demand starts."
+          intro="Students can offer any service they're good at. These popular categories are what students already sell on campus through Instagram and word of mouth, so we expect early demand there. Prices are example ranges; students set their own rates."
           id="cat-title"
         />
         <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -93,6 +93,27 @@ export default function HowItWorksPage() {
             </Reveal>
           ))}
         </ul>
+
+        <Reveal className="mt-6">
+          <div className="bg-brand-gradient flex flex-col gap-6 rounded-2xl p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-xl">
+              <div className="flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-navy">
+                  <Icon name="Sparkles" className="h-6 w-6" />
+                </span>
+                <h3 className="text-xl text-navy">{otherSkills.title}</h3>
+              </div>
+              <p className="mt-3 leading-relaxed text-navy/85">{otherSkills.body}</p>
+            </div>
+            <ul className="flex flex-wrap gap-2 lg:max-w-md lg:justify-end" aria-label="More examples of skills students can list">
+              {otherSkills.examples.map((x) => (
+                <li key={x} className="rounded-full bg-white/85 px-3 py-1.5 text-sm font-semibold text-navy">
+                  {x}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </Section>
 
       <Section tone="white" id="pricing" labelledBy="pricing-title">

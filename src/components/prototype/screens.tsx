@@ -125,7 +125,7 @@ export function ExploreScreen({ state, dispatch }: P) {
           type="search"
           value={state.query}
           onChange={(e) => dispatch({ type: "query", query: e.target.value })}
-          placeholder="Search photography, tutoring…"
+          placeholder="Search any skill…"
           className="h-10 w-full bg-transparent text-sm text-navy outline-none placeholder:text-muted"
         />
       </label>

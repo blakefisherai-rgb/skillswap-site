@@ -66,6 +66,13 @@ export const categories = [
   },
 ] as const;
 
+/** Listings aren't limited to the categories above. */
+export const otherSkills = {
+  title: "Anything else you're good at",
+  body: "If someone on campus would pay for it, you can list it. Students set the service, the price, and the delivery time; the categories above just help clients browse.",
+  examples: ["Video editing", "Website setup", "Music lessons", "Language practice", "Fitness coaching", "Interview prep", "Translation", "Sewing & alterations"],
+} as const;
+
 export const howItWorks = {
   students: [
     { title: "Verify with your .edu email", body: "Sign up free and confirm you're a current CU Boulder student." },

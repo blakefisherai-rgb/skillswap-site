@@ -5,7 +5,7 @@
 import type { IconName } from "@/components/ui/Icon";
 import type { FeeTierId } from "./pricing";
 
-export type CategoryId = "photo" | "design" | "tutoring" | "marketing" | "research" | "events";
+export type CategoryId = "photo" | "design" | "tutoring" | "marketing" | "research" | "events" | "other";
 
 export const protoCategories: { id: CategoryId | "all"; label: string }[] = [
   { id: "all", label: "All" },
@@ -15,6 +15,7 @@ export const protoCategories: { id: CategoryId | "all"; label: string }[] = [
   { id: "marketing", label: "Marketing" },
   { id: "research", label: "Research" },
   { id: "events", label: "Events" },
+  { id: "other", label: "Other" },
 ];
 
 export type Service = {
@@ -149,6 +150,24 @@ export const students: Student[] = [
     portfolio: [{ title: "Philanthropy gala recap", client: "Greek council", icon: "PartyPopper" }],
     reviews: [{ author: "Greek council", role: "Club", stars: 5, text: "The recap video got more views than anything we posted all year." }],
   },
+  {
+    id: "leo",
+    name: "Leo Martinez",
+    short: "Leo M.",
+    major: "Computer Science",
+    year: "Junior",
+    headline: "Simple, fast websites for clubs and small shops. Plus beginner guitar lessons.",
+    rating: 4.9,
+    jobs: 8,
+    responseTime: "~2 hrs",
+    skills: ["Squarespace", "Shopify", "Web design", "Guitar"],
+    portfolio: [
+      { title: "Club website", client: "Ultimate Frisbee Club", icon: "Globe" },
+      { title: "Online menu", client: "Taqueria near campus", icon: "Store" },
+      { title: "Guitar basics", client: "3 students", icon: "Music" },
+    ],
+    reviews: [{ author: "Ultimate Frisbee Club", role: "Club", stars: 5, text: "We finally have a site with our schedule and sign-up form. Done in a week." }],
+  },
 ];
 
 export const services: Service[] = [
@@ -162,6 +181,8 @@ export const services: Service[] = [
   { id: "s8", studentId: "sam", title: "Event Flyer + IG Story", price: 45, category: "design", kind: "Club Gig", icon: "Palette", delivery: "2 drafts in 3 days" },
   { id: "s9", studentId: "sam", title: "Club Logo Refresh", price: 150, category: "design", kind: "Club Gig", icon: "Palette", delivery: "3 concepts in 1 week" },
   { id: "s10", studentId: "ellie", title: "Customer Survey + Summary", price: 300, category: "research", kind: "Business Project", icon: "BarChart3", delivery: "Results in 2 weeks" },
+  { id: "s12", studentId: "leo", title: "Club Website Setup", price: 150, category: "other", kind: "Club Gig", icon: "Globe", delivery: "Live site in 1 week" },
+  { id: "s13", studentId: "leo", title: "Beginner Guitar Lessons", price: 25, unit: "/hr", category: "other", kind: "Campus Gig", icon: "Music", delivery: "In person near campus" },
   { id: "s11", studentId: "marcus", title: "Event Recap Video", price: 180, category: "events", kind: "Club Gig", icon: "PartyPopper", delivery: "60-sec cut in 4 days" },
 ];
 
