@@ -12,8 +12,11 @@ export const site = {
   /** Production URL, used for share previews. Update after deploying. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://skillswap-cu.vercel.app",
 
-  /** TODO: team email. Replace with your real address; it shows in the footer and on the Contact page. */
-  contactEmail: "TODO: team email",
+  /**
+   * Placeholder company email (the domain skillswap-cu.com is not registered, so mail to it bounces).
+   * Replace with a real inbox if you set one up. Shows in the footer and on the Contact page.
+   */
+  contactEmail: "hello@skillswap-cu.com",
 
   /**
    * Formspree form ID (e.g. "xyzabcd"). Leave empty to store waitlist
