@@ -34,6 +34,7 @@ All copy lives in data files, so you can change text without touching layout cod
 | **Team** names, titles, bios, mission, vision, values | `src/data/team.ts` |
 | **Team photos** | `public/team/<first-name>.jpg` (portrait, about 220×300 or larger) |
 | Homepage sections | `src/data/home.ts` |
+| About page story, audiences, status | `src/data/about.ts` |
 | Gig categories, example prices, "how it works" steps | `src/data/services.ts` |
 | Fee tiers (10 / 12 / 15%) used by the pricing table and calculator | `src/data/pricing.ts` |
 | For Students / For Clubs & Businesses copy, project packages | `src/data/audiences.ts` |

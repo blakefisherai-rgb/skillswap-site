@@ -61,7 +61,7 @@ export default function InvestorsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Investors & about"
+        eyebrow="Investors"
         title="Campus trust is the moat."
         intro={`${site.oneLiner} We're seeking ${usd(ask.amount)} for ${ask.equity}% equity to launch at CU Boulder.`}
       >
